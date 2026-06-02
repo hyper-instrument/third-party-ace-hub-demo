@@ -5,7 +5,7 @@ import time
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
-from src.core.simulator.base import DeviceState, OperationResult, SimulatorDevice
+from ace.core.simulator.base import DeviceState, OperationResult, SimulatorDevice
 
 
 class XArmVisionSimulator(SimulatorDevice):
