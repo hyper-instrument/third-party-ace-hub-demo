@@ -1,0 +1,39 @@
+{
+  "id": "stack_objects",
+  "name": "Stack Objects",
+  "description": "Stack multiple objects at a target position.",
+  "type": "composite",
+  "device": "xarm-vision",
+  "capability": "stack",
+  "inputs": {
+    "object_ids": {
+      "type": "array",
+      "description": "List of object IDs to stack"
+    },
+    "target_x": {
+      "type": "number",
+      "default": 400,
+      "description": "Target X coordinate for the stack"
+    },
+    "target_y": {
+      "type": "number",
+      "default": 400,
+      "description": "Target Y coordinate for the stack"
+    },
+    "target_z": {
+      "type": "number",
+      "default": 10,
+      "description": "Target Z coordinate for the stack"
+    }
+  },
+  "outputs": {
+    "stacked_objects": {
+      "type": "array",
+      "description": "List of object IDs that were stacked"
+    },
+    "success": {
+      "type": "boolean",
+      "description": "Whether the stacking operation succeeded"
+    }
+  }
+}

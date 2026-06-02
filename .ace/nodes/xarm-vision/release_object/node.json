@@ -1,0 +1,19 @@
+{
+  "id": "release_object",
+  "name": "Release Object",
+  "description": "Release the currently held object.",
+  "type": "atomic",
+  "device": "xarm-vision",
+  "capability": "release",
+  "inputs": {},
+  "outputs": {
+    "released_object": {
+      "type": "string",
+      "description": "ID of the object that was released"
+    },
+    "success": {
+      "type": "boolean",
+      "description": "Whether the release succeeded"
+    }
+  }
+}

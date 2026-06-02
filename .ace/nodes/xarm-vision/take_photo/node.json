@@ -1,0 +1,23 @@
+{
+  "id": "take_photo",
+  "name": "Take Photo",
+  "description": "Capture a photo using the camera.",
+  "type": "atomic",
+  "device": "xarm-vision",
+  "capability": "take_photo",
+  "inputs": {},
+  "outputs": {
+    "resolution": {
+      "type": "array",
+      "description": "Image resolution as [width, height]"
+    },
+    "objects_in_view": {
+      "type": "number",
+      "description": "Number of objects detected in the photo"
+    },
+    "success": {
+      "type": "boolean",
+      "description": "Whether the photo capture succeeded"
+    }
+  }
+}

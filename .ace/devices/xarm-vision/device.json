@@ -1,0 +1,20 @@
+{
+  "name": "xarm-vision",
+  "type": "RoboticArm",
+  "vendor": "MockCorp",
+  "model": "XArm-V1",
+  "version": "1.0.0",
+  "description": "6-DOF robotic arm with camera for vision-guided manipulation",
+  "capabilities": ["move", "grab", "release", "take_photo", "detect_object"],
+  "has_simulator": true,
+  "simulator_id": "xarm-vision",
+  "parameters": {
+    "workspace": {"x": [0, 500], "y": [0, 500], "z": [0, 300]},
+    "gripper_force": [0, 100],
+    "camera_resolution": [640, 480]
+  },
+  "simulator": {
+    "source": "local",
+    "config": {"speed": 1.0}
+  }
+}

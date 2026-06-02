@@ -1,0 +1,32 @@
+{
+  "id": "move_to",
+  "name": "Move To",
+  "description": "Move the xArm to a specified 3D position.",
+  "type": "atomic",
+  "device": "xarm-vision",
+  "capability": "move",
+  "inputs": {
+    "x": {
+      "type": "number",
+      "description": "Target X coordinate"
+    },
+    "y": {
+      "type": "number",
+      "description": "Target Y coordinate"
+    },
+    "z": {
+      "type": "number",
+      "description": "Target Z coordinate"
+    }
+  },
+  "outputs": {
+    "position": {
+      "type": "object",
+      "description": "Final position after movement"
+    },
+    "success": {
+      "type": "boolean",
+      "description": "Whether the movement succeeded"
+    }
+  }
+}

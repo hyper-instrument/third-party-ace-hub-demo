@@ -1,0 +1,19 @@
+{
+  "id": "detect_objects",
+  "name": "Detect Objects",
+  "description": "Detect objects in the current camera view.",
+  "type": "atomic",
+  "device": "xarm-vision",
+  "capability": "detect_object",
+  "inputs": {},
+  "outputs": {
+    "objects": {
+      "type": "array",
+      "description": "List of detected objects with metadata"
+    },
+    "success": {
+      "type": "boolean",
+      "description": "Whether object detection succeeded"
+    }
+  }
+}

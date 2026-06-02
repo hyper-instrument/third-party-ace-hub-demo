@@ -1,0 +1,157 @@
+{
+  "id": "stack_3_blocks",
+  "name": "Stack 3 Blocks",
+  "device": "xarm-vision",
+  "description": "Detect, grab, and stack 3 colored blocks vertically",
+  "params": {
+    "block_ids": ["red_block", "green_block", "blue_block"],
+    "stack_x": 400,
+    "stack_y": 400,
+    "stack_base_z": 10
+  },
+  "nodes": [
+    {
+      "id": "detect",
+      "name": "Detect Objects",
+      "device": "xarm-vision",
+      "operation": "detect_object",
+      "params": {}
+    },
+    {
+      "id": "move_to_red",
+      "name": "Move to Red Block",
+      "device": "xarm-vision",
+      "operation": "move",
+      "params": {
+        "x": 100,
+        "y": 100,
+        "z": 10
+      }
+    },
+    {
+      "id": "grab_red",
+      "name": "Grab Red Block",
+      "device": "xarm-vision",
+      "operation": "grab",
+      "params": {
+        "object_name": "${block_ids[0]}"
+      }
+    },
+    {
+      "id": "move_red",
+      "name": "Move Red to Stack",
+      "device": "xarm-vision",
+      "operation": "move",
+      "params": {
+        "x": "${stack_x}",
+        "y": "${stack_y}",
+        "z": "${stack_base_z}"
+      }
+    },
+    {
+      "id": "release_red",
+      "name": "Release Red Block",
+      "device": "xarm-vision",
+      "operation": "release",
+      "params": {}
+    },
+    {
+      "id": "move_to_green",
+      "name": "Move to Green Block",
+      "device": "xarm-vision",
+      "operation": "move",
+      "params": {
+        "x": 200,
+        "y": 200,
+        "z": 10
+      }
+    },
+    {
+      "id": "grab_green",
+      "name": "Grab Green Block",
+      "device": "xarm-vision",
+      "operation": "grab",
+      "params": {
+        "object_name": "${block_ids[1]}"
+      }
+    },
+    {
+      "id": "move_green",
+      "name": "Move Green to Stack",
+      "device": "xarm-vision",
+      "operation": "move",
+      "params": {
+        "x": "${stack_x}",
+        "y": "${stack_y}",
+        "z": "${stack_base_z + 10}"
+      }
+    },
+    {
+      "id": "release_green",
+      "name": "Release Green Block",
+      "device": "xarm-vision",
+      "operation": "release",
+      "params": {}
+    },
+    {
+      "id": "move_to_blue",
+      "name": "Move to Blue Block",
+      "device": "xarm-vision",
+      "operation": "move",
+      "params": {
+        "x": 300,
+        "y": 300,
+        "z": 10
+      }
+    },
+    {
+      "id": "grab_blue",
+      "name": "Grab Blue Block",
+      "device": "xarm-vision",
+      "operation": "grab",
+      "params": {
+        "object_name": "${block_ids[2]}"
+      }
+    },
+    {
+      "id": "move_blue",
+      "name": "Move Blue to Stack",
+      "device": "xarm-vision",
+      "operation": "move",
+      "params": {
+        "x": "${stack_x}",
+        "y": "${stack_y}",
+        "z": "${stack_base_z + 20}"
+      }
+    },
+    {
+      "id": "release_blue",
+      "name": "Release Blue Block",
+      "device": "xarm-vision",
+      "operation": "release",
+      "params": {}
+    },
+    {
+      "id": "photo",
+      "name": "Take Final Photo",
+      "device": "xarm-vision",
+      "operation": "take_photo",
+      "params": {}
+    }
+  ],
+  "edges": [
+    {"source": "detect", "target": "move_to_red"},
+    {"source": "move_to_red", "target": "grab_red"},
+    {"source": "grab_red", "target": "move_red"},
+    {"source": "move_red", "target": "release_red"},
+    {"source": "release_red", "target": "move_to_green"},
+    {"source": "move_to_green", "target": "grab_green"},
+    {"source": "grab_green", "target": "move_green"},
+    {"source": "move_green", "target": "release_green"},
+    {"source": "release_green", "target": "move_to_blue"},
+    {"source": "move_to_blue", "target": "grab_blue"},
+    {"source": "grab_blue", "target": "move_blue"},
+    {"source": "move_blue", "target": "release_blue"},
+    {"source": "release_blue", "target": "photo"}
+  ]
+}

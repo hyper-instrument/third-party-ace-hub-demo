@@ -1,0 +1,24 @@
+{
+  "id": "grab_object",
+  "name": "Grab Object",
+  "description": "Grab an object by its ID using the gripper.",
+  "type": "atomic",
+  "device": "xarm-vision",
+  "capability": "grab",
+  "inputs": {
+    "object_id": {
+      "type": "string",
+      "description": "ID of the object to grab"
+    }
+  },
+  "outputs": {
+    "held_object": {
+      "type": "string",
+      "description": "ID of the object now held"
+    },
+    "success": {
+      "type": "boolean",
+      "description": "Whether the grab succeeded"
+    }
+  }
+}

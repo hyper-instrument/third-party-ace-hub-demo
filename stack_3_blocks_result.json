@@ -1,0 +1,229 @@
+{
+  "job_id": "d2ba607266ba",
+  "workflow_id": "stack_3_blocks",
+  "workflow_name": "Stack 3 Blocks",
+  "status": "success",
+  "node_results": [
+    {
+      "node_id": "detect",
+      "node_name": "Detect Objects",
+      "status": "success",
+      "output": {
+        "visible_objects": [
+          "red_block",
+          "green_block",
+          "blue_block"
+        ],
+        "count": 3
+      },
+      "error": null,
+      "started_at": "2026-06-02T08:13:28.907060+00:00",
+      "finished_at": "2026-06-02T08:13:28.907186+00:00",
+      "duration_seconds": 0.0
+    },
+    {
+      "node_id": "move_to_red",
+      "node_name": "Move to Red Block",
+      "status": "success",
+      "output": {
+        "position": {
+          "x": 100.0,
+          "y": 100.0,
+          "z": 10.0
+        }
+      },
+      "error": null,
+      "started_at": "2026-06-02T08:13:28.907195+00:00",
+      "finished_at": "2026-06-02T08:13:28.907241+00:00",
+      "duration_seconds": 0.0
+    },
+    {
+      "node_id": "grab_red",
+      "node_name": "Grab Red Block",
+      "status": "success",
+      "output": {
+        "grabbed": "red_block"
+      },
+      "error": null,
+      "started_at": "2026-06-02T08:13:28.907247+00:00",
+      "finished_at": "2026-06-02T08:13:28.907330+00:00",
+      "duration_seconds": 0.0
+    },
+    {
+      "node_id": "move_red",
+      "node_name": "Move Red to Stack",
+      "status": "success",
+      "output": {
+        "position": {
+          "x": 400.0,
+          "y": 400.0,
+          "z": 10.0
+        }
+      },
+      "error": null,
+      "started_at": "2026-06-02T08:13:28.907335+00:00",
+      "finished_at": "2026-06-02T08:13:28.907360+00:00",
+      "duration_seconds": 0.0
+    },
+    {
+      "node_id": "release_red",
+      "node_name": "Release Red Block",
+      "status": "success",
+      "output": {
+        "released": "red_block",
+        "at": {
+          "x": 400.0,
+          "y": 400.0,
+          "z": 10.0
+        }
+      },
+      "error": null,
+      "started_at": "2026-06-02T08:13:28.907364+00:00",
+      "finished_at": "2026-06-02T08:13:28.907392+00:00",
+      "duration_seconds": 0.0
+    },
+    {
+      "node_id": "move_to_green",
+      "node_name": "Move to Green Block",
+      "status": "success",
+      "output": {
+        "position": {
+          "x": 200.0,
+          "y": 200.0,
+          "z": 10.0
+        }
+      },
+      "error": null,
+      "started_at": "2026-06-02T08:13:28.907396+00:00",
+      "finished_at": "2026-06-02T08:13:28.907410+00:00",
+      "duration_seconds": 0.0
+    },
+    {
+      "node_id": "grab_green",
+      "node_name": "Grab Green Block",
+      "status": "success",
+      "output": {
+        "grabbed": "green_block"
+      },
+      "error": null,
+      "started_at": "2026-06-02T08:13:28.907414+00:00",
+      "finished_at": "2026-06-02T08:13:28.907435+00:00",
+      "duration_seconds": 0.0
+    },
+    {
+      "node_id": "move_green",
+      "node_name": "Move Green to Stack",
+      "status": "success",
+      "output": {
+        "position": {
+          "x": 400.0,
+          "y": 400.0,
+          "z": 10.0
+        }
+      },
+      "error": null,
+      "started_at": "2026-06-02T08:13:28.907439+00:00",
+      "finished_at": "2026-06-02T08:13:28.907457+00:00",
+      "duration_seconds": 0.0
+    },
+    {
+      "node_id": "release_green",
+      "node_name": "Release Green Block",
+      "status": "success",
+      "output": {
+        "released": "green_block",
+        "at": {
+          "x": 400.0,
+          "y": 400.0,
+          "z": 10.0
+        }
+      },
+      "error": null,
+      "started_at": "2026-06-02T08:13:28.907460+00:00",
+      "finished_at": "2026-06-02T08:13:28.907473+00:00",
+      "duration_seconds": 0.0
+    },
+    {
+      "node_id": "move_to_blue",
+      "node_name": "Move to Blue Block",
+      "status": "success",
+      "output": {
+        "position": {
+          "x": 300.0,
+          "y": 300.0,
+          "z": 10.0
+        }
+      },
+      "error": null,
+      "started_at": "2026-06-02T08:13:28.907477+00:00",
+      "finished_at": "2026-06-02T08:13:28.907489+00:00",
+      "duration_seconds": 0.0
+    },
+    {
+      "node_id": "grab_blue",
+      "node_name": "Grab Blue Block",
+      "status": "success",
+      "output": {
+        "grabbed": "blue_block"
+      },
+      "error": null,
+      "started_at": "2026-06-02T08:13:28.907493+00:00",
+      "finished_at": "2026-06-02T08:13:28.907508+00:00",
+      "duration_seconds": 0.0
+    },
+    {
+      "node_id": "move_blue",
+      "node_name": "Move Blue to Stack",
+      "status": "success",
+      "output": {
+        "position": {
+          "x": 400.0,
+          "y": 400.0,
+          "z": 10.0
+        }
+      },
+      "error": null,
+      "started_at": "2026-06-02T08:13:28.907513+00:00",
+      "finished_at": "2026-06-02T08:13:28.907531+00:00",
+      "duration_seconds": 0.0
+    },
+    {
+      "node_id": "release_blue",
+      "node_name": "Release Blue Block",
+      "status": "success",
+      "output": {
+        "released": "blue_block",
+        "at": {
+          "x": 400.0,
+          "y": 400.0,
+          "z": 10.0
+        }
+      },
+      "error": null,
+      "started_at": "2026-06-02T08:13:28.907535+00:00",
+      "finished_at": "2026-06-02T08:13:28.907546+00:00",
+      "duration_seconds": 0.0
+    },
+    {
+      "node_id": "photo",
+      "node_name": "Take Final Photo",
+      "status": "success",
+      "output": {
+        "image_id": "img_1780388008907",
+        "resolution": [
+          640,
+          480
+        ],
+        "format": "jpeg",
+        "mock": true
+      },
+      "error": null,
+      "started_at": "2026-06-02T08:13:28.907551+00:00",
+      "finished_at": "2026-06-02T08:13:28.907576+00:00",
+      "duration_seconds": 0.0
+    }
+  ],
+  "started_at": "2026-06-02T08:13:28.906568+00:00",
+  "finished_at": "2026-06-02T08:13:28.907579+00:00",
+  "error": null
+}
